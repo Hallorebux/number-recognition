@@ -1,0 +1,81 @@
+$testColor: blue;
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #222222;
+}
+
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.content {
+  height: 80%;
+  padding: 15px;
+}
+
+@media(prefers-color-scheme: dark) {
+  body {
+    background-color: #222222;
+    color: #fff; 
+  }
+}
+
+.drawingArea {
+  background-color: $testColor;
+  color: #fff;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  padding: 3px;
+  border-radius: 5px;
+
+  background-color: rgba(50, 50, 50, 0.1);
+
+  @media(prefers-color-scheme: dark) {
+    background-color: rgba(205, 205, 205, 0.1);
+  }
+}
+
+footer {
+  background-color: rgb(229, 57, 53);
+  text-align: center;
+}
+
+.github {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+
+  i {
+    display: inline-flex;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+
+    background-image: url("./images/GitHub-Mark-120px-plus.png");
+
+    @media(prefers-color-scheme: dark) {
+      background-image: url("./images/GitHub-Mark-Light-120px-plus.png");
+    }
+  }
+}
